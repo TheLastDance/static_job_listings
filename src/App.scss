@@ -1,0 +1,74 @@
+$DesaturatedDarkCyan: hsl(180, 29%, 50%);
+$LightGrayishCyan: hsl(180, 52%, 96%);
+$DarkGrayishCyan: hsl(180, 8%, 52%);
+$VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-bg {
+
+    width: 100%;
+    background-color: $DesaturatedDarkCyan;
+
+    .container-bg-2 {
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-color: $DesaturatedDarkCyan;
+    }
+}
+
+.content {
+    padding: 25px 0 0 0;
+    display: flex;
+    justify-content: center;
+    background: $LightGrayishCyan;
+
+    &_2 {
+        width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .job-card {
+            margin: 25px auto;
+            width: 80%;
+            height: 150px;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            background: #fff;
+
+            &-2 {
+                .job-card-logo {
+
+                    img {
+                        width: 90px;
+                    }
+                }
+            }
+
+            .job-card-filters {
+
+                span {
+                    margin: 0 10px 0 0;
+                    color: $DesaturatedDarkCyan;
+                    width: fit-content;
+                    padding: 5px;
+                    background: $LightGrayishCyan;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
