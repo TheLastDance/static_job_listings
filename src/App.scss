@@ -24,6 +24,68 @@ $VeryDarkGrayishCyan: hsl(180, 14%, 20%);
     }
 }
 
+.filter {
+    display: flex;
+    justify-content: center;
+    background: $LightGrayishCyan;
+
+    .filter-2 {
+        width: 1440px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: 35px;
+    }
+
+    .filter-3 {
+        width: 80%;
+        height: 70px;
+        background: #fff;
+        border-radius: 5px;
+        position: absolute;
+        top: -35px;
+        box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
+        -webkit-box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
+        -moz-box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+
+        .search-filters {
+            margin: 0 10px 0 0;
+
+            span:nth-child(1) {
+                color: $DesaturatedDarkCyan;
+                font-weight: 700;
+                font-size: 0.9rem;
+                width: fit-content;
+                padding: 5px;
+                background: $LightGrayishCyan;
+                border-radius: 5px;
+            }
+
+            span:nth-child(2) {
+                background: $DesaturatedDarkCyan;
+                font-weight: 700;
+                font-size: 0.9rem;
+                padding: 5px 8px;
+                cursor: pointer;
+                border-radius: 0 5px 5px 0;
+
+                &:hover {
+                    background: $VeryDarkGrayishCyan;
+                }
+
+                img {
+                    width: 13px;
+                    height: 13px;
+                }
+            }
+        }
+    }
+
+}
+
 .content {
     padding: 25px 0 0 0;
     display: flex;
@@ -44,20 +106,90 @@ $VeryDarkGrayishCyan: hsl(180, 14%, 20%);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid black;
             border-radius: 5px;
             background: #fff;
+            box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
+            -webkit-box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
+            -moz-box-shadow: 1px 5px 32px -5px rgba(91, 164, 164, 0.89);
 
             &-2 {
+                display: flex;
+                margin-left: 20px;
+
                 .job-card-logo {
+                    display: flex;
+                    align-items: center;
 
                     img {
                         width: 90px;
                     }
                 }
+
+                .job-card-info {
+                    margin-left: 20px;
+
+                    .job-card-info-company {
+                        span:nth-child(1) {
+                            color: $DesaturatedDarkCyan;
+                            font-weight: 700;
+                            margin-right: 12px;
+                        }
+
+                        span:nth-child(2),
+                        span:nth-child(3) {
+                            border-radius: 20px;
+                            background: $DesaturatedDarkCyan;
+                            color: #fff;
+                            padding: 3px 8px;
+                            font-weight: 700;
+                            font-size: 0.8rem;
+                            margin-right: 12px;
+                        }
+
+                        span:nth-child(3) {
+                            background: $VeryDarkGrayishCyan;
+                            margin-right: 0;
+                        }
+
+                    }
+
+                    .job-card-info-position {
+                        margin-top: 12px;
+                        font-weight: 700;
+                        color: $VeryDarkGrayishCyan;
+                        font-size: 1.2rem;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $DesaturatedDarkCyan;
+                        }
+                    }
+
+                    .job-card-info-date {
+                        margin-top: 12px;
+
+                        span:nth-child(1),
+                        span:nth-child(2),
+                        span:nth-child(3) {
+                            font-weight: 500;
+                            font-size: 0.9rem;
+                            color: $DarkGrayishCyan;
+                        }
+
+                        span:nth-child(1)::after,
+                        span:nth-child(2)::after {
+                            content: '\00b7';
+                            margin: 0 12px;
+                            font-weight: 900;
+                        }
+
+                    }
+                }
             }
 
             .job-card-filters {
+                display: flex;
+                flex-wrap: wrap;
 
                 span {
                     margin: 0 10px 0 0;
@@ -67,8 +199,19 @@ $VeryDarkGrayishCyan: hsl(180, 14%, 20%);
                     background: $LightGrayishCyan;
                     border-radius: 5px;
                     cursor: pointer;
+                    font-weight: 700;
+                    font-size: 0.9rem;
+                }
+
+                span:hover {
+                    background: $DesaturatedDarkCyan;
+                    color: #fff;
                 }
             }
+        }
+
+        .job-card:hover {
+            border-left: 5px solid $DesaturatedDarkCyan ;
         }
     }
 }
